@@ -11,10 +11,9 @@ jobs:
         with:
           store: ${{ secrets.SHOP_STORE }}
           password: ${{ secrets.SHOP_PASSWORD }}
+          collection_handle: all
           access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
-          collection_handle: bags
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_TOKEN }}
-          pull_theme: ${{ secrets.SHOP_PULL_THEME }}
 
   theme-check:
     name: Theme Check

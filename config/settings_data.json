@@ -1,7 +1,8 @@
 {
   "current": {
-    "logo": "shopify://shop_images/Dawn_logo_90x_2x_9c794845-71aa-42f1-ab92-1ee94b86f0e5.webp",
+    "logo": "shopify:\/\/shop_images\/Dawn_logo_90x_2x_9c794845-71aa-42f1-ab92-1ee94b86f0e5.webp",
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -107,11 +108,13 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
-    "social_facebook_link": "https://facebook.com/shopify",
-    "social_instagram_link": "http://instagram.com/shopify",
-    "social_youtube_link": "https://www.youtube.com/shopify",
-    "social_tiktok_link": "https://tiktok.com/@shopify",
-    "social_twitter_link": "https://twitter.com/shopify",
+    "brand_headline": "Odestry",
+    "brand_domain": "https:\/\/odestry.myshopify.com",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -176,7 +179,7 @@
             "type": "text",
             "settings": {
               "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
             }
           }
         },
@@ -386,7 +389,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
               }
             }
           },

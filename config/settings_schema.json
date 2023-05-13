@@ -1384,6 +1384,11 @@
         "label": "t:settings_schema.brand_information.settings.brand_description.label"
       },
       {
+        "type": "url",
+        "id": "brand_domain",
+        "label": "t:settings_schema.brand_information.settings.brand_domain.label"
+      },
+      {
         "type": "image_picker",
         "id": "brand_image",
         "label": "t:settings_schema.brand_information.settings.brand_image.label"

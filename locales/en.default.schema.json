@@ -187,6 +187,10 @@
         "brand_description": {
           "label": "Description"
         },
+        "brand_domain": {
+          "label": "Domain",
+          "info": "Add a brand primary domain."
+        },
         "brand_image": {
           "label": "Image"
         },

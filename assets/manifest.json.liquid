@@ -1,0 +1,58 @@
+{
+  "short_name": {{ settings.brand_headline | escape | json }},
+  "name": {{ settings.brand_headline | json }},
+  "description": {{ settings.brand_description | escape | json }},
+  {% if settings.colors_accent_1 != blank %}
+    "theme_color": {{ settings.colors_accent_1 | json }},
+  {% endif %}
+  {% if settings.colors_background_1 != blank %}
+    "background_color": {{ settings.colors_background_1 | json }},
+  {% endif %}
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "ltr",
+  {% if settings.favicon != blank %}
+    "icons": [
+      {
+        "src": {{ settings.favicon | image_url: width: 48, height: 48 | json }}, "sizes": "48x48"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 72, height: 72 | json }}, "sizes": "72x72"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 96, height: 96 | json }},
+        "sizes": "96x96"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 144, height: 144 | json }}, "sizes": "144x144"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 168, height: 168 | json }},
+        "sizes": "168x168"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 192, height: 192 | json }},
+        "sizes": "192x192"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 256, height: 256 | json }},
+        "sizes": "256x256"
+      },
+      {
+        "src": {{ settings.favicon | image_url: width: 512, height: 512 | json }},
+        "sizes": "512x512"
+      }
+    ],
+  {% endif %}
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": {{ 'manifest.json' | asset_url | prepend: 'https:' | json }}
+    }
+  ],
+  {% if settings.brand_domain != blank %}
+    "start_url": {{ settings.brand_domain | append: '/?utm_source=pwa' | json }},
+    "scope": {{ settings.brand_domain | json }},
+  {% endif %}
+  "id": "/?utm_source=pwa"
+}
