@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "d88853b4-5aef-45ce-8ed8-c43adaea252d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screen_Shot_2021-07-26_at_9.55_2_1420x_1420x_0a773b91-905c-4fa6-b9c0-0a6f708e5942.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screen_Shot_2021-06-10_at_1.04_17_1420x_1420x_6ba64f2c-1740-438c-8b3d-daf7f0781352.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screen_Shot_2021-06-10_at_1.07_1420x_1420x_51ab26b9-92a4-43de-bc37-6ef5eb3fcb45.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-0",
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-1",
+        "template--19000142823740__d88853b4-5aef-45ce-8ed8-c43adaea252d-1683377931253d5a22-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19000142823740__5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0-16833784043350c7dc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our quality promise",
+            "heading_size": "h2"
+          }
+        },
+        "template--19000142823740__5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0-16833784043350c7dc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quality is never an accident. It is always the result of intelligent effort. We spend most of our time and energy for good design and to achieve high quality. Every single detail from material to technique is thought through with obsessive attention. If our product doesn't satisfy you, we'll take it back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19000142823740__5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0-16833784043350c7dc-0",
+        "template--19000142823740__5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0-16833784043350c7dc-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "d88853b4-5aef-45ce-8ed8-c43adaea252d",
+    "main",
+    "5dcc7d56-6417-4c7b-9cae-e77ccebbc1a0"
+  ]
+}

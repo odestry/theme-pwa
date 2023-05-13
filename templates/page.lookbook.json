@@ -1,0 +1,214 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "60360057-1bfd-412d-8aea-e5ada6a1c129": {
+      "type": "collage",
+      "blocks": {
+        "template--19000273568060__60360057-1bfd-412d-8aea-e5ada6a1c129-1683379201df7db057-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/beige_1100x_1100x_c5a99ec1-565d-44f6-96d5-da97f15ffddb.webp"
+          }
+        },
+        "ef636cb9-57ef-4822-b1c4-7dd88944be0d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/mlouye-helix-sand-banner-mobile-l1_720x_720x_710da1a8-1dd2-4b1f-bf04-fd9f384c48e3.webp"
+          }
+        }
+      },
+      "block_order": [
+        "template--19000273568060__60360057-1bfd-412d-8aea-e5ada6a1c129-1683379201df7db057-0",
+        "ef636cb9-57ef-4822-b1c4-7dd88944be0d"
+      ],
+      "settings": {
+        "heading": "Summer inspiration",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "24e6830e-748f-4e1e-b414-b9ec8189cc14": {
+      "type": "collage",
+      "blocks": {
+        "04ffce5c-d462-4f4d-ba17-c357eeb4f5c0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/67708907_901020666948593_6980208638084257089_n_990x_990x_7876c222-6df1-4d3e-8a27-1236384eb598.webp"
+          }
+        },
+        "8c42d8b5-1c95-44c3-a77e-b01bccad0891": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify://shop_images/Helix-multicolor_1100x_1100x_dbb5286f-be2b-447d-89fb-960771723475.webp",
+            "video_url": "https://www.youtube.com/watch?v=JbeuTrPSV2w",
+            "description": "Describe the video"
+          }
+        }
+      },
+      "block_order": [
+        "04ffce5c-d462-4f4d-ba17-c357eeb4f5c0",
+        "8c42d8b5-1c95-44c3-a77e-b01bccad0891"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "24aacb6b-5b9d-4155-8d27-4154435197c6": {
+      "type": "collage",
+      "blocks": {
+        "256e373a-c00a-4b36-8aef-20cab690069c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fence_990x_990x_d0d61974-7e41-4782-afef-536731b1eae5.webp"
+          }
+        },
+        "6b6a740a-cbd9-42d6-9eb8-0ed9016fb2ef": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/17265992_273568689752120_565474247435091968_n_990x_990x_3e78030d-9475-4a02-a30c-c93e79be15ed.webp"
+          }
+        },
+        "a3614f2f-8e85-4b67-b35d-59ecb47c72f4": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify://shop_images/15803153_1119335364831494_1136873067247566848_n_990x_990x_59dbd48c-a570-4451-b2e6-28654b3c6cd3.jpg",
+            "video_url": "https://www.youtube.com/watch?v=PbEXxU6aW6o",
+            "description": "Describe the video"
+          }
+        }
+      },
+      "block_order": [
+        "256e373a-c00a-4b36-8aef-20cab690069c",
+        "6b6a740a-cbd9-42d6-9eb8-0ed9016fb2ef",
+        "a3614f2f-8e85-4b67-b35d-59ecb47c72f4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "2ae7b7db-dfdc-4c06-a365-f460bbd2cb1b": {
+      "type": "collage",
+      "blocks": {
+        "2f778a9a-8032-4e50-a871-c584c7ebbe63": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/23667958_1995292917378769_1214838960031793152_n_720x_720x_399ea74e-6359-453a-8c9e-9212d6831192.webp"
+          }
+        },
+        "2cf6c84b-b509-4bc4-9043-674c850e069d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sera-tote-new-de-ban2_1100x_1100x_e9fa3e91-03d1-4329-8dca-fc80e1fc28ec.webp"
+          }
+        }
+      },
+      "block_order": [
+        "2f778a9a-8032-4e50-a871-c584c7ebbe63",
+        "2cf6c84b-b509-4bc4-9043-674c850e069d"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "dd8da630-ba45-426e-8fd6-50f7f93b3732": {
+      "type": "collage",
+      "blocks": {
+        "897fc518-bf70-49f7-a78d-ab93ca809806": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pink-cropped_1500x_1500x_508a5b83-86ed-42d2-a909-27a74b4ca41b.webp"
+          }
+        },
+        "4fc94eb6-2f79-4d12-9da9-0ff1f852f7e5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/59621535_133816347799668_5448715094877713107_n_990x_990x_1c75708e-274c-4762-8bb3-b8d837ff96c7.webp"
+          }
+        }
+      },
+      "block_order": [
+        "897fc518-bf70-49f7-a78d-ab93ca809806",
+        "4fc94eb6-2f79-4d12-9da9-0ff1f852f7e5"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "61f3e4a2-99e9-4984-9616-fe54b602f7bc": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bags",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "60360057-1bfd-412d-8aea-e5ada6a1c129",
+    "24e6830e-748f-4e1e-b414-b9ec8189cc14",
+    "24aacb6b-5b9d-4155-8d27-4154435197c6",
+    "2ae7b7db-dfdc-4c06-a365-f460bbd2cb1b",
+    "dd8da630-ba45-426e-8fd6-50f7f93b3732",
+    "61f3e4a2-99e9-4984-9616-fe54b602f7bc"
+  ]
+}
