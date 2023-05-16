@@ -1,23 +1,15 @@
 {
-  "name": "theme-name",
+  "name": "shopify-theme-pwa",
   "private": true,
   "version": "0.0.0",
   "packageManager": "pnpm@8.1.1",
   "scripts": {
-    "dev": "shopify theme dev",
+    "dev": "shopify theme dev -s odestry",
     "lint": "shopify theme check",
     "pull": "shopify theme pull -d -o sections/*.json templates/*.json config/*.json"
   },
   "devDependencies": {
     "@shopify/cli": "latest",
-    "@shopify/theme": "latest",
-    "lint-staged": "^13.2.2",
-    "simple-git-hooks": "^2.8.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "shopify theme check"
+    "@shopify/theme": "latest"
   }
 }

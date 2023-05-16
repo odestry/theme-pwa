@@ -1,4 +1,4 @@
-# shopify-pwa-theme
+# shopify-theme-pwa
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
 
