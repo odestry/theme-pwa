@@ -1402,6 +1402,13 @@
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.brand_information.settings.brand_image_width.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_application_mode",
+        "label": "t:settings_schema.brand_information.settings.enable_application_mode.label",
+        "info": "t:settings_schema.brand_information.settings.enable_application_mode.info",
+        "default": true
       }
     ]
   },

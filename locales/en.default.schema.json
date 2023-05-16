@@ -196,6 +196,10 @@
         },
         "brand_image_width": {
           "label": "Image width"
+        },
+        "enable_application_mode": {
+          "label": "Enable application mode",
+          "info": "This will enable progressive web application."
         }
       }
     },

@@ -7,24 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.colors_accent_1 }}">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    <meta name="application-name" content="{{ shop.name }}">
-    <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    {% if settings.enable_application_mode %}
+      <meta name="application-name" content="{{ shop.name }}">
+      <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <meta name="theme-color" content="{{ settings.colors_accent_1 }}">
-    <link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
+      <link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
 
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('{{ 'service-worker.js' | asset_url }}')
-          .then(() => console.log('Service Worker registered successfully.'))
-          .catch(error => console.log('Service Worker registration failed:', error));
-      }
-    </script>
+      {% unless request.design_mode %}
+        <script>
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('{{ 'service-worker.js' | asset_url }}')
+              .then(() => console.log('Service Worker registered successfully.'))
+              .catch(error => console.log('Service Worker registration failed:', error));
+          }
+        </script>
+      {% endunless %}
+    {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
