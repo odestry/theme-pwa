@@ -8,24 +8,7 @@
     <meta name="theme-color" content="{{ settings.colors_accent_1 }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    {% if settings.enable_application_mode %}
-      <meta name="application-name" content="{{ shop.name }}">
-      <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-      <link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
-
-      {% unless request.design_mode %}
-        <script>
-          if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('{{ 'service-worker.js' | asset_url }}')
-              .then(() => console.log('Service Worker registered successfully.'))
-              .catch(error => console.log('Service Worker registration failed:', error));
-          }
-        </script>
-      {% endunless %}
-    {% endif %}
+    {% render 'application' %}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">

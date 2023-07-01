@@ -1,0 +1,86 @@
+{% comment %}
+  Renders progressive web app related meta tags and links.
+
+  Usage:
+  {% render 'application' %}
+{% endcomment %}
+
+
+{% if settings.enable_application_mode %}
+  <meta name="application-name" content="{{ settings.application_name }}">
+  <meta name="apple-mobile-web-app-title" content="{{ settings.application_name }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  {% if settings.application_splash_screen != blank %}
+    <link rel="apple-touch-startup-image" href="{{ settings.application_splash_screen }}">
+  {% endif %}
+
+  <meta name="theme-color" content="{{ settings.application_theme_color }}">
+
+  <link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
+
+  {% comment %} {% assign service_worker_url = shop.domain | append: '/cdn/shop/t/70/assets/' | append: 'service-worker.js' | prepend: 'https://' %} {% endcomment %}
+
+  {% unless request.design_mode %}
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('{{ 'service-worker.js' | asset_url }}')
+          .catch((error) => console.log('Service Worker registration failed:', error));
+      }
+
+      {% if settings.application_show_button %}
+        // Check if the PWA is already installed
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+          // PWA is already installed
+          console.log('PWA is already installed.');
+        } else {
+          // Listen for the beforeinstallprompt event
+          window.addEventListener('beforeinstallprompt', (event) => {
+            // Prevent the default installation prompt
+            event.preventDefault();
+
+            // Store the event for later use
+            let installPromptEvent = event;
+
+            // Display your custom installation prompt
+            // You can create a button or any other UI element to trigger the installation
+            const installButton = document.createElement('button');
+            installButton.classList.add('button', 'application-button');
+
+            installButton.innerText = '{{ settings.application_button_label }}';
+            installButton.addEventListener('click', () => {
+              // Show the installation prompt
+              installPromptEvent.prompt();
+
+              // Wait for the user to respond to the prompt
+              installPromptEvent.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                  console.log('PWA installed successfully.');
+                } else if (choiceResult.outcome === 'dismissed') {
+                  console.log('PWA installation rejected.');
+                }
+
+                // Clear the saved prompt event
+                installPromptEvent = null;
+              });
+            });
+
+            // Append the install button to the DOM
+            document.body.appendChild(installButton);
+          });
+        }
+      {% endif %}
+    </script>
+
+    {% style %}
+      .application-button {
+        position: fixed !important;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 100;
+      }
+    {% endstyle %}
+  {% endunless %}
+{% endif %}

@@ -1384,11 +1384,6 @@
         "label": "t:settings_schema.brand_information.settings.brand_description.label"
       },
       {
-        "type": "url",
-        "id": "brand_domain",
-        "label": "t:settings_schema.brand_information.settings.brand_domain.label"
-      },
-      {
         "type": "image_picker",
         "id": "brand_image",
         "label": "t:settings_schema.brand_information.settings.brand_image.label"
@@ -1402,13 +1397,6 @@
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.brand_information.settings.brand_image_width.label"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_application_mode",
-        "label": "t:settings_schema.brand_information.settings.enable_application_mode.label",
-        "info": "t:settings_schema.brand_information.settings.enable_application_mode.info",
-        "default": true
       }
     ]
   },
@@ -1567,6 +1555,106 @@
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      }
+    ]
+  },
+  {
+    "name": "Application Mode",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_application_mode",
+        "label": "Enable Application Mode",
+        "info": "This will enable progressive web application in your store.",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "application_name",
+        "label": "Application name"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_icon",
+        "label": "Application icon",
+        "info": "This icon will be used for the application icon on the home screen."
+      },
+      {
+        "type": "image_picker",
+        "id": "application_maskable_icon",
+        "label": "Application maskable icon",
+        "info": "This icon needs to support a variety of shapes and must not have a background."
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "application_theme_color",
+        "label": "Application color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "application_background_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Splash screen"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_splash_screen",
+        "label": "Splash screen",
+        "info": "This image will be used as the splash screen when the application is launched."
+      },
+      {
+        "type": "header",
+        "content": "Installation button"
+      },
+      {
+        "type": "paragraph",
+        "content": "This enable a button to your store to install the application on the home screen of your customer's device."
+      },
+      {
+        "type": "checkbox",
+        "label": "Show installation button",
+        "id": "application_show_button",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "application_button_label",
+        "label": "Button label",
+        "default": "Install Application"
+      },
+      {
+        "type": "header",
+        "content": "Application shortcut"
+      },
+      {
+        "type": "paragraph",
+        "content": "This will add a shortcut to your application on the home screen of your customer's device."
+      },
+      {
+        "type": "text",
+        "id": "application_shortcut_name",
+        "label": "Shortcut name",
+        "default": "Best Sellers"
+      },
+      {
+        "type": "url",
+        "id": "application_shortcut_link",
+        "label": "Shortcut link"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_shortcut_icon",
+        "label": "Shortcut icon",
+        "info": "This icon will be used for the application shortcut on the home screen."
       }
     ]
   }

@@ -1,5 +1,5 @@
 // Define a name for our cache
-const CACHE_NAME = 'v1_cache';
+const CACHE_NAME = 'v1-cache';
 
 const urlsToCache = [
   '/',
@@ -66,3 +66,5 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
+
