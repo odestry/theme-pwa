@@ -1,0 +1,178 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Theme Name",
+    "theme_version": "0.1.0",
+    "theme_author": "Odestry",
+    "theme_documentation_url": "https:\/\/odestry.blanklob.com",
+    "theme_support_url": "https:\/\/odestry.blanklob.com"
+  },
+  {
+    "name": "Application Mode",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_application_mode",
+        "label": "Enable Application Mode",
+        "info": "This will enable progressive web application in your store.",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "application_name",
+        "label": "Application name"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_icon",
+        "label": "Application icon",
+        "info": "This icon will be used for the application icon on the home screen."
+      },
+      {
+        "type": "image_picker",
+        "id": "application_maskable_icon",
+        "label": "Application maskable icon",
+        "info": "This icon needs to support a variety of shapes and must not have a background."
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "application_theme_color",
+        "label": "Application color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "application_background_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Splash screen"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_splash_screen",
+        "label": "Splash screen",
+        "info": "This image will be used as the splash screen when the application is launched."
+      },
+      {
+        "type": "header",
+        "content": "Installation button"
+      },
+      {
+        "type": "paragraph",
+        "content": "This enable a button to your store to install the application on the home screen of your customer's device."
+      },
+      {
+        "type": "checkbox",
+        "label": "Show installation button",
+        "id": "application_show_button",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "application_button_label",
+        "label": "Button label",
+        "default": "Install Application"
+      },
+      {
+        "type": "header",
+        "content": "Application shortcut"
+      },
+      {
+        "type": "paragraph",
+        "content": "This will add a shortcut to your application on the home screen of your customer's device."
+      },
+      {
+        "type": "text",
+        "id": "application_shortcut_name",
+        "label": "Shortcut name",
+        "default": "Best Sellers"
+      },
+      {
+        "type": "url",
+        "id": "application_shortcut_link",
+        "label": "Shortcut link"
+      },
+      {
+        "type": "image_picker",
+        "id": "application_shortcut_icon",
+        "label": "Shortcut icon",
+        "info": "This icon will be used for the application shortcut on the home screen."
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Use typography to present your design and content as clearly and efficiently as possible."
+      },
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "default": "inter_n7",
+        "label": "Font",
+        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+      },
+      {
+        "type": "header",
+        "content": "Body"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "default": "inter_n5",
+        "label": "Font",
+        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          },
+          {
+            "value": "page",
+            "label": "Page"
+          }
+        ],
+        "default": "page",
+        "label": "Cart type"
+      }
+    ]
+  },
+  {
+    "name": "Currency",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Currency codes"
+      },
+      {
+        "type": "checkbox",
+        "id": "currency_code_enabled",
+        "label": "Show currency codes",
+        "info": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
+        "default": true
+      }
+    ]
+  }
+]

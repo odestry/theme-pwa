@@ -1,0 +1,15 @@
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.liquid",
+      "options": {
+        "singleQuote": false,
+        "singleLineLinkTags": true,
+        "liquidSingleQuote": true,
+        "bracketSameLine": true
+      }
+    }
+  ]
+}

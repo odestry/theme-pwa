@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+  }
+
+  details > summary {
+    @apply list-none;
+  }
+
+  details summary::-webkit-details-marker {
+    @apply hidden;
+  }
+}

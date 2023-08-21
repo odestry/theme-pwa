@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js antialiased scroll-smooth" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% render 'application' %}
+
+    <title>{{ page_title }}</title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'typography' %}
+
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+    {{ content_for_header }}
+
+    {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
+  </head>
+  <body class="min-h-screen">
+    <main
+      id="MainContent"
+      class="flex flex-col outline-none"
+      tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% render 'development-screen-indicator' %}
+
+    <script>
+      window.shopUrl = '{{ request.origin }}'
+      window.routes = {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+        product_recommendations_url: '{{ routes.product_recommendations_url }}'
+      }
+
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+      if (Shopify.designMode) document.documentElement.classList.add('design-mode')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<section class="grid items-center py-12 md:py-16 lg:py-20">
+  <div class="container px-4 mx-auto flex flex-col items-start gap-4 md:gap-5">
+    <h1 class="max-w-xl scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl">
+      {{ section.settings.heading }}
+    </h1>
+    <p class="max-w-prose text-xl text-gray-500">
+      {{ section.settings.text }}
+    </p>
+    {% if section.settings.button_label != blank %}
+      <a
+        class="inline-flex items-center justify-center px-6 h-11 font-medium rounded-sm text-white bg-black"
+        href="{{ routes.root_url }}">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main 404",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "404 Page Not Found"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "The page you are looking for does not exist."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Go to Home"
+    }
+  ]
+}
+{% endschema %}

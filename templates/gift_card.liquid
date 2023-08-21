@@ -1,0 +1,63 @@
+{% layout none %}
+
+<!doctype html>
+<html class="no-js antialiased scroll-smooth" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer="defer"></script>
+
+    {% assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros | strip_html %}
+
+    <title>{{ 'gift_cards.issued.title' | t: value: formatted_initial_value, shop: shop.name }}</title>
+
+    <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
+
+    {% render 'typography' %}
+
+    {{ content_for_header }}
+
+    {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
+  </head>
+  <body>
+    <main
+      id="MainContent"
+      class="flex flex-col outline-none"
+      tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <script>
+      (() => {
+        let string = { qrImageAlt: {{ 'gift_cards.issued.qr_image_alt' | t | json }} };
+        document.addEventListener('DOMContentLoaded', () => {
+          new QRCode(document.querySelector('.gift-card__qr-code'), {
+            text: document.querySelector('.gift-card__qr-code').dataset.identifier,
+            width: 120,
+            height: 120,
+            imageAltText: string.qrImageAlt
+          });
+        });
+
+        let template = document.getElementsByTagName("template")[0];
+        let clonedTemplate = template.content.cloneNode(true);
+
+        let isMessageDisplayed = false;
+        document.querySelector('.gift-card__copy-link')
+          .addEventListener('click', () => {
+            navigator.clipboard.writeText(document.querySelector('.gift-card__number').value).then(() => {
+              if (!isMessageDisplayed) {
+                document.querySelector('.gift-card__copy-success').appendChild(clonedTemplate);
+                isMessageDisplayed = true
+              }
+            });
+          });
+      })();
+
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+    </script>
+  </body>
+</html>

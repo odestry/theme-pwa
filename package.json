@@ -1,0 +1,23 @@
+{
+  "name": "theme-name",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "run-p -sr shopify:dev watch",
+    "shopify:dev": "shopify theme dev -e development",
+    "pull": "shopify theme pull -d -o sections/*.json templates/*.json config/*.json",
+    "watch": "vite build --watch",
+    "build": "vite build --minify"
+  },
+  "devDependencies": {
+    "@shopify/cli": "latest",
+    "@shopify/theme": "latest",
+    "@shopify/prettier-plugin-liquid": "latest",
+    "autoprefixer": "^10.4.15",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.28",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  }
+}

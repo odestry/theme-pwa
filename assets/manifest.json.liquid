@@ -1,0 +1,119 @@
+{
+  "short_name": {{ settings.application_name | json }},
+  "name": {{ settings.application_name | json }},
+  "description": {{ settings.application_name | json }},
+  "categories": ["shopping"],
+  {% if settings.application_theme_color != blank %}
+    "theme_color": {{ settings.application_theme_color | json }},
+  {% endif %}
+  {% if settings.application_background_color != blank %}
+    "background_color": {{ settings.application_background_color | json }},
+  {% endif %}
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "auto",
+  {% if settings.application_icon != blank %}
+    "icons": [
+      {% if settings.application_maskable_icon != blank %}
+        {
+          "src": {{ settings.application_icon | image_url: width: 48, height: 48 | json }},
+          "sizes": "48x48",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 72, height: 72 | json }},
+          "sizes": "72x72",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 96, height: 96 | json }},
+          "sizes": "96x96",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 144, height: 144 | json }},
+          "sizes": "144x144",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 168, height: 168 | json }},
+          "sizes": "168x168",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 192, height: 192 | json }},
+          "sizes": "192x192",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 256, height: 256 | json }},
+          "sizes": "256x256",
+          "purpose": "maskable"
+        },
+        {
+          "src": {{ settings.application_icon | image_url: width: 512, height: 512 | json }},
+          "sizes": "512x512",
+          "purpose": "maskable"
+        },
+      {% endif %}
+      {
+        "src": {{ settings.application_icon | image_url: width: 48, height: 48 | json }},
+        "sizes": "48x48"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 72, height: 72 | json }},
+        "sizes": "72x72"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 96, height: 96 | json }},
+        "sizes": "96x96"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 144, height: 144 | json }},
+        "sizes": "144x144"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 168, height: 168 | json }},
+        "sizes": "168x168"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 192, height: 192 | json }},
+        "sizes": "192x192"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 256, height: 256 | json }},
+        "sizes": "256x256"
+      },
+      {
+        "src": {{ settings.application_icon | image_url: width: 512, height: 512 | json }},
+        "sizes": "512x512"
+      }
+    ],
+  {% endif %}
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": {{ 'manifest.json' | asset_url | prepend: 'https:' | json }}
+    }
+  ],
+  "shortcuts" : [
+    {% if settings.application_shortcut_name and settings.application_shortcut_link %}
+      {
+        "name": {{ settings.application_shortcut_name | json }},
+        "short_name": {{ settings.application_shortcut_name | json }},
+        {% if settings.application_shortcut_icon != blank %}
+          "icons": [
+            {
+              "src": {{ settings.application_shortcut_icon | image_url: width: 512, height: 512 | json }},
+              "sizes": "512x512"
+            }
+          ],
+        {% endif %}
+        "url": {{ settings.application_shortcut_link | append: '/?utm_source=homescreen' | json }}
+      }
+    {% endif %}
+  ],
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "id": "/?utm_source=pwa"
+}

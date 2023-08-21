@@ -1,0 +1,20 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.idea
+dist
+
+# Misc
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+logs
+*.log
+.env
