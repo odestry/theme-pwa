@@ -1,6 +1,12 @@
 {
-  "current": "Default",
+  "current": {
+    "application_icon": "shopify:\/\/shop_images\/favicon.png",
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": {}
+    "Default": {
+    }
   }
 }
