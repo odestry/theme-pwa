@@ -8,7 +8,7 @@
     "theme_support_url": "https:\/\/odestry.blanklob.com"
   },
   {
-    "name": "Application Mode",
+    "name": "Application",
     "settings": [
       {
         "type": "checkbox",
@@ -74,12 +74,6 @@
         "label": "Show installation button",
         "id": "application_show_button",
         "default": true
-      },
-      {
-        "type": "text",
-        "id": "application_button_label",
-        "label": "Button label",
-        "default": "Install Application"
       },
       {
         "type": "header",
