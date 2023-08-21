@@ -1,4 +1,4 @@
-# theme-name
+# Theme PWA
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&colorA=338fbb&colorB=1c1c1c&logoColor=ffffff)](https://github.com/odestry/contribute)
 [![Discord Shield](https://img.shields.io/discord/983602196493004820?style=flat&colorA=338fbb&colorB=1c1c1c&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/blanklob-community-983602196493004820)
@@ -8,7 +8,7 @@
 [Contributing](#contributing) |
 [License](#license)
 
-An opinionated lightweight theme starter for all projects.
+An example theme with Support for PWAs and service workers.
 
 ## Usage
 
