@@ -8,8 +8,8 @@
       {{ section.settings.text }}
     </p>
     {% if section.settings.label != blank %}
-      <a
-        href="{{ routes.root_url }}"
+      <button
+        type="button"
         class="inline-flex items-center justify-center px-6 h-11 font-medium rounded-sm text-white bg-black">
         {{ section.settings.label }}
       </a>
@@ -30,7 +30,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Welcome to theme starter template by Odestry"
+      "default": "A demo of PWA Shopify theme built by Odestry"
     },
     {
       "type": "text",
@@ -42,7 +42,7 @@
       "type": "text",
       "id": "label",
       "label": "Button Label",
-      "default": "Get Started"
+      "default": "Install Application"
     }
   ]
 }

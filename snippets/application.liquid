@@ -45,8 +45,7 @@
 
             // Display your custom installation prompt
             // You can create a button or any other UI element to trigger the installation
-            const installButton = document.createElement('button');
-            installButton.classList.add('button', 'application-button');
+            const installButton = document.querySelector('button[type="button"]');
 
             installButton.innerText = '{{ settings.application_button_label }}';
             installButton.addEventListener('click', () => {
@@ -65,9 +64,6 @@
                 installPromptEvent = null;
               });
             });
-
-            // Append the install button to the DOM
-            document.body.appendChild(installButton);
           });
         }
       {% endif %}

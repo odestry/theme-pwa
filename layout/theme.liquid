@@ -16,8 +16,6 @@
 
     {% render 'typography' %}
 
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-
     {{ content_for_header }}
 
     {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}

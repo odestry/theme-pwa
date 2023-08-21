@@ -20,7 +20,8 @@
       {
         "type": "text",
         "id": "application_name",
-        "label": "Application name"
+        "label": "Application name",
+        "default": "Odestry"
       },
       {
         "type": "image_picker",
@@ -72,7 +73,7 @@
         "type": "checkbox",
         "label": "Show installation button",
         "id": "application_show_button",
-        "default": false
+        "default": true
       },
       {
         "type": "text",
