@@ -1,6 +1,7 @@
 # Theme PWA
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&colorA=338fbb&colorB=1c1c1c&logoColor=ffffff)](https://github.com/odestry/contribute)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&colorA=338fbb&colorB=1c1c1c&logoColor=ffffff)](https://github.com/odestry/.github/blob/main/CONTRIBUTING.md)
+[![CI](https://img.shields.io/github/actions/workflow/status/odestry/theme-pwa/ci.yml?style=flat&label=CI&colorA=338fbb&colorB=1c1c1c&logoColor=ffffff)](https://github.com/odestry/theme-pwa/blob/main/.github/workflows/ci.yml)
 [![Discord Shield](https://img.shields.io/discord/983602196493004820?style=flat&colorA=338fbb&colorB=1c1c1c&label=discord&logo=discord&logoColor=ffffff)](https://discord.gg/blanklob-community-983602196493004820)
 
 [Usage](#usage) |
@@ -15,7 +16,7 @@ An example theme with Support for PWAs and service workers.
 To get started clone the template by clicking the **Use this template** button or by running the following command:
 
 ```bash
-git clone https://github.com/odestry/theme-starter.git
+git clone https://github.com/odestry/theme-pwa.git
 ```
 
 ### Running the development server
@@ -73,7 +74,7 @@ shopify theme check
 
 ### Continuous Integration
 
-This theme uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/odestry/theme-starter/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+This theme uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/odestry/theme-pwa/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
 
 #### Shopify/lighthouse-ci-action
 
