@@ -8,6 +8,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {% if shop.brand.logo != blank %}
+      <link rel="icon" type="image/png" href="{{ shop.brand.logo | image_url: width: 32, height: 32 }}">
+    {% endif %}
+
+    {% render 'application' %}
+
     <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer="defer"></script>
 
     {% assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros | strip_html %}
@@ -18,9 +24,9 @@
 
     {% render 'typography' %}
 
-    {{ content_for_header }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
 
-    {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ content_for_header }}
   </head>
   <body>
     <main

@@ -6,10 +6,10 @@ export default defineConfig({
     emptyOutDir: false,
     minify: false,
     rollupOptions: {
-      input: '/assets/tailwind.css',
+      input: 'styles.css',
       output: {
         dir: 'assets',
-        assetFileNames: 'styles.css'
+        assetFileNames: '[name][extname]',
       }
     }
   }

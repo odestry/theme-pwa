@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "run-p -sr shopify:dev watch",
     "shopify:dev": "shopify theme dev -e development",
-    "pull": "shopify theme pull -d -o sections/*.json templates/*.json config/*.json",
-    "watch": "vite build --watch",
+    "pull": "shopify theme pull -d -o sections/*.json templates/**/*.json config/*.json",
+    "watch": "vite build -w",
     "build": "vite build --minify"
   },
   "devDependencies": {

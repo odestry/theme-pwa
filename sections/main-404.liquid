@@ -8,7 +8,7 @@
     </p>
     {% if section.settings.button_label != blank %}
       <a
-        class="inline-flex items-center justify-center px-6 h-11 font-medium rounded-sm text-white bg-black"
+        class="inline-flex items-center justify-center rounded-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 px-8 h-12 text-white bg-black"
         href="{{ routes.root_url }}">
         {{ section.settings.button_label }}
       </a>

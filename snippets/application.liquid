@@ -19,8 +19,6 @@
 
   <link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
 
-  {% comment %} {% assign service_worker_url = shop.domain | append: '/cdn/shop/t/70/assets/' | append: 'service-worker.js' | prepend: 'https://' %} {% endcomment %}
-
   {% unless request.design_mode %}
     <script>
       if ('serviceWorker' in navigator) {

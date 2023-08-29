@@ -1,18 +1,23 @@
-<section class="grid items-center py-12 md:py-16 lg:py-20">
+<section
+  class="grid items-center py-[calc(var(--spacing)*0.75)] lg:py-[--spacing]"
+  style="--spacing: {{ section.settings.spacing }}px">
   <div class="container mx-auto px-4 flex flex-col items-start gap-4 md:gap-5">
-    {% render 'image', class: 'h-[50vh] lg:h-[30rem]', image: section.settings.image %}
+    {% liquid
+      assign image = section.settings.image | default: page_image
+      render 'image' with image, class: 'aspect-square md:aspect-auto lg:h-[30rem]', preload: true
+    %}
     <h1 class="max-w-xl scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl">
       {{ section.settings.heading }}
     </h1>
     <p class="max-w-prose text-xl text-gray-500">
       {{ section.settings.text }}
     </p>
-    {% if section.settings.label != blank %}
+    {% if section.settings.button_label != blank %}
       <button
         type="button"
-        class="inline-flex items-center justify-center px-6 h-11 font-medium rounded-sm text-white bg-black [.no-js_&]:hidden application-button">
-        {{ section.settings.label }}
-      </a>
+        class="inline-flex items-center justify-center rounded-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 px-8 h-12 text-white bg-black application-button">
+        {{ section.settings.button_label }}
+      </button>
     {% endif %}
   </div>
 </section>
@@ -40,9 +45,24 @@
     },
     {
       "type": "text",
-      "id": "label",
+      "id": "button_label",
       "label": "Button Label",
       "default": "Install Application"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Vertical Spacing",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Section"
     }
   ]
 }

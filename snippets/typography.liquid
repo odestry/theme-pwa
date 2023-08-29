@@ -1,52 +1,48 @@
 {% comment %}theme-check-disable AssetPreload{% endcomment %}
 {% comment %}
-  Renders typography variables and tokens.
+  Renders typography styles and preloads fonts.
 
   Usage:
     {% render 'typography' %}
 {% endcomment %}
 
 {% comment %} We check if its a system font, or a web-safe font {% endcomment %}
-{% unless settings.enable_custom_font %}
-  {% unless settings.font_heading.system? %}
-    <link rel="preload" href="{{ settings.font_heading | font_url }}" type="font/woff2" as="font" fetchpriority="high" crossorigin>
-  {% endunless %}
+{% unless settings.font_heading.system? %}
+  <link rel="preload" href="{{ settings.font_heading | font_url }}" type="font/woff2" as="font" fetchpriority="high" crossorigin>
+{% endunless %}
 
-  {% unless settings.font_body.system? %}
-    <link rel="preload" href="{{ settings.font_body | font_url }}" type="font/woff2" as="font" fetchpriority="high" crossorigin>
-  {% endunless %}
+{% unless settings.font_body.system? %}
+  <link rel="preload" href="{{ settings.font_body | font_url }}" type="font/woff2" as="font" fetchpriority="high" crossorigin>
 {% endunless %}
 
 {% style %}
-  {% unless settings.enable_custom_font %}
-    {% unless settings.font_heading.system? %}
-      {% liquid
-        assign font_heading_medium = settings.font_heading | font_modify: 'weight', '500'
-        assign font_heading_semi_bold = settings.font_heading | font_modify: 'weight', '600'
-        assign font_heading_bold = settings.font_heading | font_modify: 'weight', 'bold'
-        assign font_heading_bold_italic = font_heading_bold | font_modify: 'style', 'italic'
-      %}
+  {% unless settings.font_heading.system? %}
+    {% liquid
+      assign font_heading_medium = settings.font_heading | font_modify: 'weight', '500'
+      assign font_heading_semi_bold = settings.font_heading | font_modify: 'weight', '600'
+      assign font_heading_bold = settings.font_heading | font_modify: 'weight', 'bold'
+      assign font_heading_bold_italic = font_heading_bold | font_modify: 'style', 'italic'
+    %}
 
-      {{ settings.font_heading | font_face: font_display: 'swap' }}
-      {{ font_heading_medium | font_face: font_display: 'swap' }}
-      {{ font_heading_semi_bold | font_face: font_display: 'swap' }}
-      {{ font_heading_bold | font_face: font_display: 'swap' }}
-      {{ font_heading_bold_italic | font_face: font_display: 'swap' }}
-    {% endunless %}
+    {{ settings.font_heading | font_face: font_display: 'swap' }}
+    {{ font_heading_medium | font_face: font_display: 'swap' }}
+    {{ font_heading_semi_bold | font_face: font_display: 'swap' }}
+    {{ font_heading_bold | font_face: font_display: 'swap' }}
+    {{ font_heading_bold_italic | font_face: font_display: 'swap' }}
+  {% endunless %}
 
-    {% unless settings.font_body.system? %}
-      {% liquid
-        assign font_body_semi_bold = settings.font_body | font_modify: 'weight', '500'
-        assign font_body_bold = settings.font_body | font_modify: 'weight', 'bold'
-        assign font_body_italic = font_body | font_modify: 'style', 'italic'
-        assign font_body_bold_italic = font_body_bold | font_modify: 'style', 'italic'
-      %}
+  {% unless settings.font_body.system? %}
+    {% liquid
+      assign font_body_semi_bold = settings.font_body | font_modify: 'weight', '500'
+      assign font_body_bold = settings.font_body | font_modify: 'weight', 'bold'
+      assign font_body_italic = settings.font_body | font_modify: 'style', 'italic'
+      assign font_body_bold_italic = font_body_bold | font_modify: 'style', 'italic'
+    %}
 
-      {{ settings.font_body | font_face: font_display: 'swap' }}
-      {{ font_body_semi_bold | font_face: font_display: 'swap' }}
-      {{ font_body_bold | font_face: font_display: 'swap' }}
-      {{ font_body_italic | font_face: font_display: 'swap' }}
-      {{ font_body_bold_italic | font_face: font_display: 'swap' }}
-    {% endunless %}
+    {{ settings.font_body | font_face: font_display: 'swap' }}
+    {{ font_body_semi_bold | font_face: font_display: 'swap' }}
+    {{ font_body_bold | font_face: font_display: 'swap' }}
+    {{ font_body_italic | font_face: font_display: 'swap' }}
+    {{ font_body_bold_italic | font_face: font_display: 'swap' }}
   {% endunless %}
 {% endstyle %}

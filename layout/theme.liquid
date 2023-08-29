@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {% if shop.brand.logo != blank %}
+      <link rel="icon" type="image/png" href="{{ shop.brand.logo | image_url: width: 32, height: 32 }}">
+    {% endif %}
+
     {% render 'application' %}
 
     <title>{{ page_title }}</title>
@@ -16,17 +20,30 @@
 
     {% render 'typography' %}
 
-    {{ content_for_header }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
 
-    {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ content_for_header }}
   </head>
   <body class="min-h-screen">
+    <header class="sticky top-0 container mx-auto px-4 flex justify-between items-center py-2 lg:py-4">
+      <a href="{{ routes.root_url }}" class="font-medium text-lg lg:text-xl no-underline">
+        {{ shop.name }}
+      </a>
+      <a href="https://github.com/odestry/theme-pwa" class="text-gray-500 no-underline" target="_blank">
+        View on Github
+      </a>
+    </header>
+
     <main
       id="MainContent"
       class="flex flex-col outline-none"
       tabindex="-1">
       {{ content_for_layout }}
     </main>
+
+    <footer class="container mx-auto px-4 text-gray-400 py-6 lg:py-8">
+      {{ powered_by_link }}
+    </footer>
 
     {% render 'development-screen-indicator' %}
 
