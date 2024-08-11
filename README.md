@@ -10,7 +10,7 @@
 [About](#about) |
 [License](#license)
 
-An example theme with Support for PWAs and service workers.
+An example theme with built-in support for Progressive Web Apps (PWAs) and service workers. To ensure optimal functionality, make sure to configure all necessary files within the settings and assets folders. Please be aware that some browsers, such as Safari, do not support PWAs.
 
 ## Usage
 

@@ -1,5 +1,7 @@
 name: CI
+
 on: [push]
+
 jobs:
   theme-check:
     name: Theme Check
