@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   {% if settings.application_splash_screen != blank %}
-    <link rel="apple-touch-startup-image" href="{{ settings.application_splash_screen }}">
+    <link rel="apple-touch-startup-image" href="{{ settings.application_splash_screen | image_url }}">
   {% endif %}
 
   <meta name="theme-color" content="{{ settings.application_theme_color }}">
